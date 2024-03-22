@@ -36,6 +36,7 @@ add_subdirectory(thirdparty/glfw-3.4)			#window oppener
 add_subdirectory(thirdparty/glad)				#opengl loader
 add_subdirectory(thirdparty/stb_image)			#loading images
 add_subdirectory(thirdparty/imgui-docking)		#ui
+add_subdirectory(thirdparty/glm)			    #ogl math
 
 
 
@@ -88,5 +89,5 @@ target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURC
 #	glad stb_image stb_truetype gl2d raudio imgui safeSave profilerLib enet glui)
 
 #enet not working yet on linux for some reason
-target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glfw 
+target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glm glfw 
 	glad stb_image imgui)
